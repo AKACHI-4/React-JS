@@ -6,6 +6,10 @@ import Welcome from './Components/Welcome';
 import Hello from './Components/JSX';
 import Message from './Components/Message';
 import Counter from './Components/Counter';
+import FunctionClick from './Components/FunctionClick';
+import ClassClick from './Components/ClassClick';
+import EventBind from './Components/EventBind';
+import ParentComponent from './Components/ParentComponent';
 
 function App() {
   return (
@@ -27,13 +31,21 @@ function App() {
       
       {/* <Welcome name="TypeScript" Area="Frontend" />
       <Welcome name="Solidity" Area="Unknown" /> */}
-      <Welcome name="Express" Area="Backend" /> 
+      {/* <Welcome name="Express" Area="Backend" />  */}
 
       {/* <Hello /> */}
       
       {/* <Message /> */}
 
       {/* <Counter /> */}
+
+      {/* <FunctionClick /> */}
+
+      {/* <ClassClick />  */}
+
+      {/* <EventBind /> */}
+
+      <ParentComponent />
 
     </div>
   );
