@@ -1,0 +1,12 @@
+RJS-20 Styling React Components
+    - CSS stylesheets
+    - Inline styling 
+    - CSS Modules 
+    - CSS in JS Libaries ( Styled Components )
+
+RJS-21 Controlled components 
+~ Form elements whose value is Controlled by react 
+    -
+    -
+    -
+    -

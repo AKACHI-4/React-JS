@@ -12,6 +12,11 @@ import EventBind from './Components/EventBind';
 import ParentComponent from './Components/ParentComponent';
 import UserGreeting from './Components/UserGreeting';
 import NameList from './Components/NameList';
+import StyleSheet from './Components/StyleSheet';
+import InlineStyle from './Components/InlineStyle';
+import './appStyles.css';
+import styles from './appStyles.module.css';
+import FormHandling from './Components/FormHandling';
 
 function App() {
   return (
@@ -51,7 +56,25 @@ function App() {
 
       {/* <UserGreeting /> */}
 
-      <NameList />
+      {/* <NameList /> */}
+
+      {/* <StyleSheet primary={true} /> */}
+
+      {/* <InlineStyle /> */}
+
+      {/* 
+      <h1 className='error'>Error</h1>
+      <h1 className={styles.success}>Success</h1> 
+      */}
+
+      {/* 
+        Advantage of using CSS modules is 
+        - The classes are locally scoped by default 
+        - CSS modules in other hand can not be used in children component coz referencing class-name using a variable
+        Soo you can't accidentally use a class that is defined for some other component 
+      */}
+
+      <FormHandling />
 
     </div>
   );

@@ -26,6 +26,11 @@ function NameList() {
     ]
     
     const nameList = names.map((name, index) => <h2 key={index}>{index} - {name}</h2>)
+
+    // Problem of using key as index
+    // https://codepen.io/gopinav/pen/gQpepq
+
+    // const nameList = names.map(name => <h2>{name}</h2>)
     // const personList = persons.map(person => (
     //     <PersonList key={person.id} person={person} />
     // ))
@@ -44,5 +49,13 @@ function NameList() {
 //     </div>
 //   )
 }
+
+// When to use index as key ?
+/*
+    1. Items in list do not have a unique id 
+    2. list is a static list and will not change
+    3. list will never be recordered or filtered
+    
+*/
 
 export default NameList
