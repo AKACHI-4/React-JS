@@ -1,27 +1,32 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+// import logo from './logo.svg';
 import './App.css';
 // import { Greet } from './Components/Greet';
-import Greet from './Components/Greet';
-import Welcome from './Components/Welcome';
-import Hello from './Components/JSX';
-import Message from './Components/Message';
-import Counter from './Components/Counter';
-import FunctionClick from './Components/FunctionClick';
-import ClassClick from './Components/ClassClick';
-import EventBind from './Components/EventBind';
-import ParentComponent from './Components/ParentComponent';
-import UserGreeting from './Components/UserGreeting';
-import NameList from './Components/NameList';
-import StyleSheet from './Components/StyleSheet';
-import InlineStyle from './Components/InlineStyle';
-import './appStyles.css';
-import styles from './appStyles.module.css';
-import FormHandling from './Components/FormHandling';
+// import Greet from './Components/Greet';
+// import Welcome from './Components/Welcome';
+// import Hello from './Components/JSX';
+// import Message from './Components/Message';
+// import Counter from './Components/Counter';
+// import FunctionClick from './Components/FunctionClick';
+// import ClassClick from './Components/ClassClick';
+// import EventBind from './Components/EventBind';
+// import ParentComponent from './Components/ParentComponent';
+// import UserGreeting from './Components/UserGreeting';
+// import NameList from './Components/NameList';
+// import StyleSheet from './Components/StyleSheet';
+// import InlineStyle from './Components/InlineStyle';
+// import './appStyles.css';
+// import styles from './appStyles.module.css';
+// import FormHandling from './Components/FormHandling';
+// import LifecycleA from './Components/LifecycleA';
+// import FragmentDemo from './Components/FragmentDemo';
+// import Table from './Components/Table';
+// import ParentComp from './Components/ParentComp';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello React</h1>
+      {/* <h1>Hello React</h1> */}
       {/* Self Closing tab bcoz There are no components inside component Greet */}
       {/* <Greet name="TypeScript" Area="Frontend" >
         <p>This is a children props</p>
@@ -74,8 +79,16 @@ function App() {
         Soo you can't accidentally use a class that is defined for some other component 
       */}
 
-      <FormHandling />
+      {/* <FormHandling /> */}
 
+      {/* <LifecycleA /> */}
+
+      {/* <FragmentDemo /> */}
+
+      {/* <Table /> */}
+
+      {/* <ParentComp /> */}
+    
     </div>
   );
 }

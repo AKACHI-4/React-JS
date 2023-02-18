@@ -4,9 +4,112 @@ RJS-20 Styling React Components
     - CSS Modules 
     - CSS in JS Libaries ( Styled Components )
 
-RJS-21 Controlled components 
-~ Form elements whose value is Controlled by react 
-    -
-    -
-    -
-    -
+RJS-22 Component LifeCycle Methods 
+    - Mounting 
+        When an instance of a component is being created and inserted into the DOM 
+    - Updating
+        When a component is being re-rendered as a result of changes to either its props or state
+    - Unmounting
+        When a component is being removed from the DOM
+    - Error Handling
+        When there is an error during rendering, in a Lifecycle method, or in the constructor of any child component
+
+RJS-23 Mounting LifeCycle Methods
+    1. constructor( props ) 
+        - A special function that will get called whenever a new component is created
+        - Intiallizing state, Binding the event handlers 
+        - Do not cause side effects. ex: HTTP requests
+        - super( props ), Directly overwrite this.state
+    2. static getDerivedStateFromProps( props, state )
+        - When the state of the component depends on changes in props over time 
+        - Set the state
+        - Do not cause side effects. ex: HTTP requests
+    3. render ()
+        - Only required method in class component
+        - Read props & state and return JSX
+        - Do not change state or interact with DOM or make AJAX calls
+        - Children components Lifecycle methods are also executed
+    4. ComponentDidMount() 
+        - Invoked immediately after a component and all its Children components have been rendered to the DOM.
+        - Cause side effects. ex: Interact with the DOM or peform any AJAX calls to load data
+
+RJS-24 Component Updating Lifecycle Methods
+    ~~
+    1. static getDerivedStateFromProps( props, state )
+        - Method is called everytime a component is re-rendered
+        - Set the state
+        - Do not cause side effects. ex: HTTP requests
+    2. shouldComponetUpdate( nextProps, nextState )
+        - Dictates if the component should re-render or not 
+        - Performance optimization 
+        - Do not cause side effects. ex: HTTP requests, Calling the setStateMethod
+    3. render ()
+        - Only required method in class component
+        - Read props & state and return JSX
+        - Do not change state or interact with DOM or make AJAX calls
+    4. getSnapshotBeforeUpdate( prevProps, prevState )
+        - Called right before the changes from the virtual DOM are to be reflected in the DOM 
+        - Capture some information from the DOM 
+        - Method will either return null or return a value. Returned value will be passed as the third parameter to the next method. 
+    5. componentDidUpdate( prevProps, prevState, snapshot )
+        - Called after the render is finished in the re-render cycles
+        - Cause side effects 
+
+    ~~ Unmounting Phase Method
+    ComponentWillMount ()
+        - Method is Invoked immediately before a component is Unmounted and destroyed 
+        - Cancelling any network requests, removing event handlers, Cancelling any subscriptions and also invalidating timers.
+        - Don't call the setState() Method
+
+    ~~ Error Handling Phase Method
+    static getDerivedStateFromError( error )
+                    X
+    ComponentDidCatch( error, info )
+        - When there is an error either during rendering, in a Lifecycle method, or in the constructor of any child component.
+
+
+RJS-26 Pure Component 
+
+    Regular Component
+        - A Regular component does not implement the shouldComponetUpdate method. it always returns true by default
+    Pure Component
+        - A Pure component on the other hand implements shouldComponetUpdate with a shallow props and state comparison
+
+
+    Shallow comparison (SC)
+        Primitive Types 
+            - a (SC) b returns true if a and b have the same value and are of the same type 
+        Complex Types
+            - a (SC) b returns true if a and b reference the exact same object
+
+        `
+        var a = [1,2,3]
+        var b = [1,2,3]
+        var c = a; 
+
+        var ab_eq = ( a === b ) // false
+        var ac_eq = ( a === c ) // true
+        `
+
+    ~ Pure Component
+        A pure Component implements shouldComponentUpdate with a shallow prop and state comparison 
+
+        SC of prevState with curState 
+        SC of prevProps with curProps
+
+                    ||
+                    ||
+                Differences?
+                    ||
+                    ||
+                    \/
+
+             Re-render Component
+
+
+    - Helps us by preventing unnecessary renders can give us a performance boost in certain scenarios.
+
+    - It is a good idea to ensure that all the children components are also pure to avoid unexpected behaviour.
+
+    - Never mutate the state. Always return a new object that reflects the new state.
+    
