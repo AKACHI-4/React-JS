@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import FocusInput from './Components/FocusInput';
+// import RefsDemo from './Components/RefsDemo';
 // import { Greet } from './Components/Greet';
 // import Greet from './Components/Greet';
 // import Welcome from './Components/Welcome';
@@ -13,7 +15,7 @@ import './App.css';
 // import ParentComponent from './Components/ParentComponent';
 // import UserGreeting from './Components/UserGreeting';
 // import NameList from './Components/NameList';
-// import StyleSheet from './Components/StyleSheet';
+// import StyleSheet from './Components/St yleSheet';
 // import InlineStyle from './Components/InlineStyle';
 // import './appStyles.css';
 // import styles from './appStyles.module.css';
@@ -26,7 +28,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* <h1>Hello React</h1> */}
+      <h1>Hello React</h1>
       {/* Self Closing tab bcoz There are no components inside component Greet */}
       {/* <Greet name="TypeScript" Area="Frontend" >
         <p>This is a children props</p>
@@ -89,6 +91,10 @@ function App() {
 
       {/* <ParentComp /> */}
     
+      {/* <RefsDemo /> */}
+
+      <FocusInput />
+
     </div>
   );
 }
